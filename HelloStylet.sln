@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloStyletClient", "HelloStyletClient\HelloStyletClient.csproj", "{C5C9DD8B-D6E4-4E8E-8657-E50D94AB6EC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloStyletClient3.1", "HelloStyletClient3.1\HelloStyletClient3.1.csproj", "{B728C48E-97AF-46A5-90CE-FBD2ABD739B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5C9DD8B-D6E4-4E8E-8657-E50D94AB6EC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5C9DD8B-D6E4-4E8E-8657-E50D94AB6EC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5C9DD8B-D6E4-4E8E-8657-E50D94AB6EC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5C9DD8B-D6E4-4E8E-8657-E50D94AB6EC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B728C48E-97AF-46A5-90CE-FBD2ABD739B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B728C48E-97AF-46A5-90CE-FBD2ABD739B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B728C48E-97AF-46A5-90CE-FBD2ABD739B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B728C48E-97AF-46A5-90CE-FBD2ABD739B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
