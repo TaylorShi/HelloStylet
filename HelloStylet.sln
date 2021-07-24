@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloStyletClient3.1", "Hel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWpf", "HelloWpf\HelloWpf.csproj", "{80339C6A-E565-4881-99AC-F6C2A9474FE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyletLoginDesign", "StyletLoginDesign\StyletLoginDesign.csproj", "{F3F4B4D1-5657-4D2D-AEC7-E06D5688A9B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{80339C6A-E565-4881-99AC-F6C2A9474FE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80339C6A-E565-4881-99AC-F6C2A9474FE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80339C6A-E565-4881-99AC-F6C2A9474FE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3F4B4D1-5657-4D2D-AEC7-E06D5688A9B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3F4B4D1-5657-4D2D-AEC7-E06D5688A9B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3F4B4D1-5657-4D2D-AEC7-E06D5688A9B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3F4B4D1-5657-4D2D-AEC7-E06D5688A9B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
