@@ -14,3 +14,7 @@
 
 * [乘风破浪，遇见Stylet轻量级WPF MVVM框架，麻雀虽小五脏俱全](https://www.cnblogs.com/taylorshi/p/15055873.html)
 * [乘风破浪，超清爽WPF御用MVVM框架Stylet，启动到登录设计的高阶实战](https://www.cnblogs.com/taylorshi/p/15056941.html)
+
+## 相关截图
+
+![](/Assets/375390-20210726024905207-1527481451.png)
