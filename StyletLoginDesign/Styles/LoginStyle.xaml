@@ -1,0 +1,295 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    >
+
+    <!-- 登录界面 窗体 -->
+    <Style x:Key="LoginWindowStyle" TargetType="{x:Type Window}">
+        <Setter Property="Width" Value="800" />
+        <Setter Property="Height" Value="480" />
+        <Setter Property="ResizeMode" Value="NoResize" />
+        <Setter Property="WindowStyle" Value="None" />
+        <Setter Property="AllowsTransparency" Value="True" />
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+
+    <!-- 登录界面 容器 -->
+    <Style x:Key="LoginBorderStyle" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="CornerRadius" Value="{StaticResource GlobalRoundedCornerForWindow}" />
+        <Setter Property="Margin" Value="8" />
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="8"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LoginCloseButton" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="30"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border>
+                        <Border.Background>
+                            <ImageBrush ImageSource="../Assets/Login/Login_Button_Close.png" Stretch="Uniform"/>
+                        </Border.Background>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LoginLogoRawImage" TargetType="{x:Type Image}">
+        <Setter Property="Source" Value="../Assets/Login/Login_logo.png"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Margin" Value="0,0,0,0"/>
+    </Style>
+
+    <Style x:Key="LoginErrorMessageTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="Margin" Value="10,0"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="{StaticResource GlobalWarningColor}"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="TextWrapping" Value="Wrap"></Setter>
+    </Style>
+
+    <Style x:Key="LoginInputControlBorder" TargetType="{x:Type Border}">
+        <Setter Property="Width" Value="271"/>
+        <Setter Property="Height" Value="43"/>
+        <Setter Property="Margin" Value="0,0,0,14"/>
+        <Setter Property="Background" Value="{StaticResource GlobalBackgroundColor}"/>
+        <Setter Property="CornerRadius" Value="{StaticResource GlobalRoundedCornerForControl}"/>
+        <Setter Property="BorderBrush" Value="#7B7CA4"/>
+        <Setter Property="BorderThickness" Value="1.5"/>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="{StaticResource GlobalDisableColor}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="LoginIcoImageForBase" TargetType="{x:Type Image}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5,0"/>
+        <Setter Property="Width" Value="24"/>
+        <Setter Property="Height" Value="24"/>
+    </Style>
+    
+    <Style x:Key="LoginIcoImageForTenant" BasedOn="{StaticResource LoginIcoImageForBase}" TargetType="{x:Type Image}">
+        <Setter Property="Source" Value="../Assets/Login/Login_Ico_Tenant.png"/>
+    </Style>
+
+    <Style x:Key="LoginIcoImageForPassword" BasedOn="{StaticResource LoginIcoImageForBase}" TargetType="{x:Type Image}">
+        <Setter Property="Source" Value="../Assets/Login/Login_Ico_Password.png"/>
+    </Style>
+
+    <Style x:Key="LoginIcoImageForUser" BasedOn="{StaticResource LoginIcoImageForBase}" TargetType="{x:Type Image}">
+        <Setter Property="Source" Value="../Assets/Login/Login_Ico_User.png"/>
+    </Style>
+
+    <Style x:Key="LoginIcoImageForShop" BasedOn="{StaticResource LoginIcoImageForBase}" TargetType="{x:Type Image}">
+        <Setter Property="Source" Value="../Assets/Login/Login_Ico_Shop.png"/>
+    </Style>
+
+    <Style x:Key="LoginIcoImageForDealCarrier" BasedOn="{StaticResource LoginIcoImageForBase}" TargetType="{x:Type Image}">
+        <Setter Property="Source" Value="../Assets/Login/Login_Ico_DealCarrier.png"/>
+    </Style>
+
+    <Style x:Key="LoginKeyboardButton" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="22"/>
+        <Setter Property="Height" Value="22"/>
+        <Setter Property="Margin" Value="58,-8,0,0"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Opacity" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="KeyboardBottonBorder">
+                        <Border.Background>
+                            <ImageBrush ImageSource="../Assets/Login/Login_Button_Keyboard.png" Stretch="Uniform"/>
+                        </Border.Background>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" TargetName="KeyboardBottonBorder" Value="#fafafa"  />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.6"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LoginNormalInputTextBox" TargetType="{x:Type TextBox}">
+        <Setter Property="Height" Value="43"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="17"/>
+        <Setter Property="TextOptions.TextFormattingMode" Value="Display"/>
+        <Setter Property="TextOptions.TextRenderingMode" Value="ClearType"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{StaticResource GlobalForegroundColor}"/>
+    </Style>
+
+    <Style x:Key="LoginTenantInputTextBox" BasedOn="{StaticResource LoginNormalInputTextBox}" TargetType="{x:Type TextBox}">
+        <Style.Resources>
+            <VisualBrush x:Key="LoginTenantInputVisualBrush" TileMode="None" Opacity="0.5" Stretch="None" AlignmentX="Left">
+                <VisualBrush.Visual>
+                    <TextBlock Text="{Binding Source={StaticResource Lang},XPath=Login_TenantName}" Foreground="{StaticResource GlobalForegroundColor}" />
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Style.Resources>
+        <Style.Triggers>
+            <Trigger Property="Text" Value="{x:Null}">
+                <Setter Property="Background" Value="{StaticResource LoginTenantInputVisualBrush}"/>
+            </Trigger>
+            <Trigger Property="Text" Value="">
+                <Setter Property="Background" Value="{StaticResource LoginTenantInputVisualBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="LoginAccountInputTextBox" BasedOn="{StaticResource LoginNormalInputTextBox}" TargetType="{x:Type TextBox}">
+        <Style.Resources>
+            <VisualBrush x:Key="LoginAccountInputVisualBrush" TileMode="None" Opacity="0.5" Stretch="None" AlignmentX="Left">
+                <VisualBrush.Visual>
+                    <TextBlock Text="{Binding Source={StaticResource Lang},XPath=Login_UserName}" Foreground="{StaticResource GlobalForegroundColor}" />
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Style.Resources>
+        <Style.Triggers>
+            <Trigger Property="Text" Value="{x:Null}">
+                <Setter Property="Background" Value="{StaticResource LoginAccountInputVisualBrush}"/>
+            </Trigger>
+            <Trigger Property="Text" Value="">
+                <Setter Property="Background" Value="{StaticResource LoginAccountInputVisualBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="LoginPasswordInputTextBox" TargetType="{x:Type PasswordBox}">
+        <Setter Property="Height" Value="43"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="17"/>
+        <Setter Property="TextOptions.TextFormattingMode" Value="Display"/>
+        <Setter Property="TextOptions.TextRenderingMode" Value="ClearType"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{StaticResource GlobalForegroundColor}"/>
+        <Style.Resources>
+            <VisualBrush x:Key="LoginPasswordInputVisualBrush" TileMode="None" Opacity="0.5" Stretch="None" AlignmentX="Left">
+                <VisualBrush.Visual>
+                    <TextBlock Text="{Binding Source={StaticResource Lang},XPath=Login_Password}" Foreground="{StaticResource GlobalForegroundColor}"/>
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Style.Resources>
+    </Style>
+
+    <Style x:Key="LoginActionButton" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="271"/>
+        <Setter Property="Height" Value="43"/>
+        <Setter Property="Margin" Value="0,12,0,0"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Foreground" Value="#FFFFFFFF"/>
+        <Setter Property="Background" Value="#3889FF"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="{StaticResource GlobalRoundedCornerForControl}">
+                        <Border.Effect>
+                            <DropShadowEffect ShadowDepth="0" BlurRadius="3"/>
+                        </Border.Effect>
+                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger  Property="IsPressed" Value="true">
+                            <Setter Property="Background"  Value="#3889FF"  />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="{StaticResource GlobalDisableColor}"  />
+                            <Setter Property="Foreground" Value="{StaticResource GlobalNormalColor}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LoginSwitchButton" TargetType="{x:Type Button}">
+        <Setter Property="Margin" Value="0,10,0,0"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="#3889FF"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="SwitchBorder" Background="Transparent">
+                        <ContentPresenter Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger  Property="IsPressed" Value="true">
+                            <Setter Property="Foreground"  Value="#ffffff"  />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{StaticResource GlobalNormalColor}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LoginWarningButton" TargetType="{x:Type Button}">
+        <Setter Property="Margin" Value="0,0,0,10"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="{StaticResource GlobalWarningColor}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="LoginWarningBorder" Background="Transparent">
+                        <ContentPresenter Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground"  Value="#ffffff"  />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{StaticResource GlobalNormalColor}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LoginStepTipTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="Margin" Value="0,0,0,10"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{StaticResource GlobalNormalColor}"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="TextWrapping" Value="Wrap"></Setter>
+    </Style>
+    
+</ResourceDictionary>

@@ -1,0 +1,27 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:system="clr-namespace:System;assembly=System.Runtime"
+    xmlns:s="https://github.com/canton7/Stylet"
+    >
+
+    <!-- 全局圆角 窗体 -->
+    <CornerRadius x:Key="GlobalRoundedCornerForWindow">8</CornerRadius>
+
+    <!-- 全局圆角 控件 -->
+    <CornerRadius x:Key="GlobalRoundedCornerForControl">4</CornerRadius>
+
+    <SolidColorBrush x:Key="GlobalBackgroundColor" Color="#FDFFFD"></SolidColorBrush>
+    <SolidColorBrush x:Key="GlobalForegroundColor" Color="#122246"></SolidColorBrush>
+    <SolidColorBrush x:Key="GlobalNormalColor" Color="#A4A4A4"></SolidColorBrush>
+    <SolidColorBrush x:Key="GlobalWarningColor" Color="#E41400"></SolidColorBrush>
+    <SolidColorBrush x:Key="GlobalDisableColor" Color="#CFD6DE"></SolidColorBrush>
+
+    <!-- 全局转换器 布尔值转可视化状态 -->
+    <s:BoolToVisibilityConverter 
+        x:Key="BoolToVisConverter" 
+        TrueVisibility="Visible" 
+        FalseVisibility="Hidden"
+        />
+    
+</ResourceDictionary>

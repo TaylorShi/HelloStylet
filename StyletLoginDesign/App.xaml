@@ -8,6 +8,15 @@
             <s:ApplicationLoader.Bootstrapper>
                 <local:Bootstrapper/>
             </s:ApplicationLoader.Bootstrapper>
+
+            <s:ApplicationLoader.MergedDictionaries>
+                <ResourceDictionary>
+                    <XmlDataProvider x:Key="Lang" Source="Languages/Languages.zh-CN.xml" XPath="language/resources" IsAsynchronous="False"/>
+                </ResourceDictionary>
+                <ResourceDictionary Source="./Styles/GlobalStyle.xaml"/>
+                <ResourceDictionary Source="./Styles/SplashStyle.xaml"/>
+                <ResourceDictionary Source="./Styles/LoginStyle.xaml"/>
+            </s:ApplicationLoader.MergedDictionaries>
         </s:ApplicationLoader>
     </Application.Resources>
 </Application>

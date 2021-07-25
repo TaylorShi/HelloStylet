@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<language>
+  <resources>
+    
+    <!-- Splash -->
+    <Splash_Title>Splash</Splash_Title>
+    <Splash_StatusDescription>Loading</Splash_StatusDescription>
+    
+    <!-- Login -->
+    <Login_UserName>Please input account number</Login_UserName>
+    <Login_TenantName>Please input merchant code</Login_TenantName>
+    <Login_Password>Please input account password</Login_Password>>
+    <Login_Login>Login</Login_Login>
+    <Login_RebindMac>Rebind the Mac address</Login_RebindMac>
+    <Login_RegisterAccount>Register</Login_RegisterAccount>
+    <Login_MissMac>Login failed, MacAddress for current device does not found</Login_MissMac>
+    <Login_MissAccountName>Login failed, Account name does not found</Login_MissAccountName>
+    <Login_MissAccountPassword>Login failed, Account password does not found</Login_MissAccountPassword>
+    
+  </resources>
+</language>

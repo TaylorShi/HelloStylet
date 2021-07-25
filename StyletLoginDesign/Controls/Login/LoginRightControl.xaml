@@ -1,0 +1,29 @@
+﻿<UserControl 
+    x:Class="StyletLoginDesign.Controls.Login.LoginRightControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:StyletLoginDesign.Controls.Login"
+    mc:Ignorable="d" 
+    d:DesignHeight="450" 
+    d:DesignWidth="800"
+    >
+
+    <Border CornerRadius="0,8,8,0" Background="{StaticResource GlobalBackgroundColor}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <local:LoginRightBarControl
+                Grid.Row="0"
+                />
+
+            <local:LoginAccountControl
+                Grid.Row="1"
+                />
+        </Grid>
+    </Border>
+</UserControl>

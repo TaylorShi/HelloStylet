@@ -3,11 +3,11 @@
 namespace StyletLoginDesign.Pages
 {
     /// <summary>
-    /// Interaction logic for ShellView.xaml
+    /// Interaction logic for SplashView.xaml
     /// </summary>
-    public partial class ShellView : Window
+    public partial class SplashView : Window
     {
-        public ShellView()
+        public SplashView()
         {
             InitializeComponent();
         }
