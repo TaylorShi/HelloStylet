@@ -37,8 +37,8 @@
                 />
         </Border>
 
-        <!--商户号-->
-        <Border Grid.Row="2" Style="{StaticResource LoginInputControlBorder}" IsEnabled="{Binding TenantCodeIsEnabled}">
+        <!--组织编码-->
+        <Border Grid.Row="2" Style="{StaticResource LoginInputControlBorder}" IsEnabled="{Binding OrganCodeIsEnabled}">
             <Grid >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"></ColumnDefinition>
@@ -47,16 +47,16 @@
 
                 <Image
                     Grid.Column="0" 
-                    Style="{StaticResource LoginIcoImageForTenant}"
+                    Style="{StaticResource LoginIcoImageForOrgan}"
                     />
 
                 <TextBox
                     Grid.Column="1" 
-                    Style="{StaticResource LoginTenantInputTextBox}"
-                    x:Name="TenantCode" 
+                    Style="{StaticResource LoginOrganInputTextBox}"
+                    x:Name="OrganCode" 
                     InputMethod.IsInputMethodEnabled="False"  
-                    Text="{Binding TenantCode,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
-                    IsReadOnly="{Binding TenantCodeIsReadOnly}"
+                    Text="{Binding OrganCode,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                    IsReadOnly="{Binding OrganCodeIsReadOnly}"
                     >
                     <TextBox.InputBindings>
                         <KeyBinding Key="Return" Command="{Binding LoginCommand, Mode=OneWay}"/>
@@ -66,7 +66,7 @@
             </Grid>
         </Border>
         
-        <!--账号-->
+        <!--用户账号-->
         <Border Grid.Row="3" Style="{StaticResource LoginInputControlBorder}" IsEnabled="{Binding UserNameIsEnabled}">
             <Grid >
                 <Grid.ColumnDefinitions>
@@ -95,7 +95,7 @@
             </Grid>
         </Border>
 
-        <!--密码-->
+        <!--账号密码-->
         <Border Grid.Row="4" Style="{StaticResource LoginInputControlBorder}" IsEnabled="{Binding PasswordIsEnabled}">
             <Grid >
                 <Grid.ColumnDefinitions>

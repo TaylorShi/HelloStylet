@@ -17,6 +17,7 @@
     <None Remove="Assets\Login\Login_Button_Close.png" />
     <None Remove="Assets\Login\Login_Button_Keyboard.png" />
     <None Remove="Assets\Login\Login_Ico_DealCarrier.png" />
+    <None Remove="Assets\Login\Login_Ico_Organ.png" />
     <None Remove="Assets\Login\Login_Ico_Password.png" />
     <None Remove="Assets\Login\Login_Ico_Shop.png" />
     <None Remove="Assets\Login\Login_Ico_Tenant.png" />
@@ -39,13 +40,13 @@
     <Content Include="Assets\Login\Login_Ico_DealCarrier.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Login\Login_Ico_Organ.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\Login\Login_Ico_Password.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Login\Login_Ico_Shop.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\Login\Login_Ico_Tenant.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Login\Login_Ico_User.png">

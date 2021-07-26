@@ -83,8 +83,8 @@
         <Setter Property="Height" Value="24"/>
     </Style>
     
-    <Style x:Key="LoginIcoImageForTenant" BasedOn="{StaticResource LoginIcoImageForBase}" TargetType="{x:Type Image}">
-        <Setter Property="Source" Value="../Assets/Login/Login_Ico_Tenant.png"/>
+    <Style x:Key="LoginIcoImageForOrgan" BasedOn="{StaticResource LoginIcoImageForBase}" TargetType="{x:Type Image}">
+        <Setter Property="Source" Value="../Assets/Login/Login_Ico_Organ.png"/>
     </Style>
 
     <Style x:Key="LoginIcoImageForPassword" BasedOn="{StaticResource LoginIcoImageForBase}" TargetType="{x:Type Image}">
@@ -143,20 +143,20 @@
         <Setter Property="Foreground" Value="{StaticResource GlobalForegroundColor}"/>
     </Style>
 
-    <Style x:Key="LoginTenantInputTextBox" BasedOn="{StaticResource LoginNormalInputTextBox}" TargetType="{x:Type TextBox}">
+    <Style x:Key="LoginOrganInputTextBox" BasedOn="{StaticResource LoginNormalInputTextBox}" TargetType="{x:Type TextBox}">
         <Style.Resources>
-            <VisualBrush x:Key="LoginTenantInputVisualBrush" TileMode="None" Opacity="0.5" Stretch="None" AlignmentX="Left">
+            <VisualBrush x:Key="LoginOrganInputVisualBrush" TileMode="None" Opacity="0.5" Stretch="None" AlignmentX="Left">
                 <VisualBrush.Visual>
-                    <TextBlock Text="{Binding Source={StaticResource Lang},XPath=Login_TenantName}" Foreground="{StaticResource GlobalForegroundColor}" />
+                    <TextBlock Text="{Binding Source={StaticResource Lang},XPath=Login_OrganName}" Foreground="{StaticResource GlobalForegroundColor}" />
                 </VisualBrush.Visual>
             </VisualBrush>
         </Style.Resources>
         <Style.Triggers>
             <Trigger Property="Text" Value="{x:Null}">
-                <Setter Property="Background" Value="{StaticResource LoginTenantInputVisualBrush}"/>
+                <Setter Property="Background" Value="{StaticResource LoginOrganInputVisualBrush}"/>
             </Trigger>
             <Trigger Property="Text" Value="">
-                <Setter Property="Background" Value="{StaticResource LoginTenantInputVisualBrush}"/>
+                <Setter Property="Background" Value="{StaticResource LoginOrganInputVisualBrush}"/>
             </Trigger>
         </Style.Triggers>
     </Style>

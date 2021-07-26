@@ -8,7 +8,7 @@
     
     <!-- Login -->
     <Login_UserName>请输入账号</Login_UserName>
-    <Login_TenantName>请输入商户号</Login_TenantName>
+    <Login_OrganName>请输入组织编码</Login_OrganName>
     <Login_Password>请输入密码</Login_Password>
     <Login_Login>登录</Login_Login>
     <Login_RebindMac>重新绑定Mac地址</Login_RebindMac>
