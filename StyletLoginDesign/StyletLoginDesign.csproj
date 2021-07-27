@@ -6,6 +6,8 @@
     <UseWPF>true</UseWPF>
     
     <RootNamespace>StyletLoginDesign</RootNamespace>
+    
+    <ApplicationIcon>C:\TempSpace\HelloStylet\StyletLoginDesign\Assets\favicon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Assets\favicon.ico" />
     <None Remove="Assets\Login\login_backgroud.jpg" />
     <None Remove="Assets\Login\Login_Button_Close.png" />
     <None Remove="Assets\Login\Login_Button_Keyboard.png" />
@@ -31,6 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Assets\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\Login\Login_Button_Close.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

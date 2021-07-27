@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary 
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:helper="clr-namespace:StyletLoginDesign.Helper"
     >
 
     <!-- 登录界面 窗体 -->
@@ -196,6 +197,14 @@
                 </VisualBrush.Visual>
             </VisualBrush>
         </Style.Resources>
+        <Style.Triggers>
+            <Trigger Property="helper:PasswordBoxHelper.Password" Value="{x:Null}">
+                <Setter Property="Background" Value="{StaticResource LoginPasswordInputVisualBrush}"/>
+            </Trigger>
+            <Trigger Property="helper:PasswordBoxHelper.Password" Value="">
+                <Setter Property="Background" Value="{StaticResource LoginPasswordInputVisualBrush}"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <Style x:Key="LoginActionButton" TargetType="{x:Type Button}">
