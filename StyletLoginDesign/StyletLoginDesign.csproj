@@ -7,7 +7,7 @@
     
     <RootNamespace>StyletLoginDesign</RootNamespace>
     
-    <ApplicationIcon>C:\TempSpace\HelloStylet\StyletLoginDesign\Assets\favicon.ico</ApplicationIcon>
+    <ApplicationIcon>.\Assets\favicon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
